@@ -11,7 +11,7 @@ public class Leccion
 {
     //Este metodo crea el numero de leccion
     public int ID;
-    //AEste metodo crea la pregunta
+    //Este metodo crea la pregunta
     public string lessons;
     //Este metodo crea las respuestas
     public List<string> options;
