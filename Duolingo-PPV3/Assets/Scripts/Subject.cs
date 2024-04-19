@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-/// Este ScriptableObject permite rellenar en el inspector las preguntas, respuestas e identificar la respuesta correcta en una lista
+//Este metodo permite rellenar en el inspector las preguntas, respuestas e identificar la respuesta correcta en una lista
 
 
 [CreateAssetMenu(fileName = "Name Subject", menuName = "ScriptableObjects/New_Lesson", order = 1)]
