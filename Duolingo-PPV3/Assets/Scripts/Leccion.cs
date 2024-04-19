@@ -12,6 +12,6 @@ public class Leccion
     public string lessons;
     //Este metodo crea las respuestas
     public List<string> options;
-    //Este metodo crea a las y las define respuesta correcta
+    //Este metodo crea a las respuestas y  define la respuesta correcta
     public int correctAnswer;
 }
