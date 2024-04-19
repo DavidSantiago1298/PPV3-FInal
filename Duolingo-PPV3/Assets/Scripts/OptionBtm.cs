@@ -33,9 +33,7 @@ public class OptionBtm : MonoBehaviour
 
     
     //Este metodo detecta si el jugador selecciona alguna opcion,al hacerlo el levelManager actualizará la información de la respuesta del jugador 
-    //y activa el boton de comprobar.
-   
-    /// Este metodo permite a el boton ser seleccionable
+    //y activa el boton de comprobar, a la vez también permite a el boton ser seleccionable
     
     public void SelectionOption()
     {
