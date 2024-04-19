@@ -26,6 +26,8 @@ Aqui les dejo miis redes de contacto profesional para cualquier duda o trabajo:
 
 https://www.linkedin.com/me?trk=p_mwlite_my_network-secondary_nav
 
+https://www.artstation.com/davidisaisantiagoelizalde4
+
 
 
 ![1](https://github.com/DavidSantiago1298/PPV3-FInal/assets/156475324/0e42491c-3b55-43ec-b67b-c1e5a47ec6e6)
