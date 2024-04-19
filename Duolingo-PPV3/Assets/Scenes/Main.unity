@@ -1828,7 +1828,7 @@ GameObject:
   - component: {fileID: 713676772}
   - component: {fileID: 713676771}
   m_Layer: 0
-  m_Name: Exit
+  m_Name: Salir
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

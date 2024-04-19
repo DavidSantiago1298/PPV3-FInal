@@ -4,41 +4,39 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-/// <summary>
-/// Esta clase está encargada de almacenar la respuesta correcta tanto en ID y en su nombre
-/// </summary>
+
+//Esta clase almacena el ID de la respuesta correcta y su nombre
+
 public class OptionBtm : MonoBehaviour
 {
-    //Almacena la respuesta individual de cada boton
+    //Almacena el ID de la respuesta unica de cada boton
     public int OptionID;
     //Almacena el nombre de la respuesta
     public string OptionName;
 
-    /// <summary>
-    /// Es esta seccion estamos inicializando nuestra variable del nombre del boton
-    /// en la interfaz del usuario
-    /// </summary>
+}
+    /// Aqui se ubica el boton por su nombre en la UI
+  
     void Start()
     {
         transform.GetChild(0).GetComponent<TMP_Text>().text = OptionName;
     }
 
-    /// <summary>
-    /// Este metodo está encargado de actualizar manualmente, el nombre visible en UI de las opciones
-    /// Este metodo se llama cada vez que se cambia a la siguiente pregunta
-    /// </summary>
+
+    //Este metodo permite actualizar el nombre visible en UI de las preeguntas para pasar a la siguiente cada vez que se requiera
+  
+  
     public void UpdateText()
     {
         transform.GetChild(0).GetComponent<TMP_Text>().text = OptionName;
     }
 
-    /// <summary>
-    /// Este metodo esta encargado de detectar si el jugador selecciona la opcion,
-    /// si es así, el levelManager actualizará la información de la respuesta del jugador 
-    /// y hará interactuable o no el botón de comprobar.
-    /// 
-    /// Este metodo, se utiliza en el mismo gameObject, en el componente Button como un evento de click
-    /// </summary>
+    
+    //Este metodo detecta si el jugador selecciona alguna opcion,al hacerlo el levelManager actualizará la información de la respuesta del jugador 
+    //y activa el boton de comprobar.
+   
+    /// Este metodo permite a el boton ser seleccionable
+    
     public void SelectionOption()
     {
         LevelManager.Instance.SetPlayerAnswer(OptionID);

@@ -5,17 +5,18 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-/// <summary>
-/// En nuestra escena lesson, esta clase nos va a ayudar a cambiar las preguntas, las opciones de los botones
-/// Tambien nos inicará si esta es correcta o incorrecta a la hora de seleccionarla y enviar la respuesta
-/// </summary>
+
+//Este scrypt controla el manejo de las lecciones permintiendo cambiar las preguntas sus respuestas y  nos indicará
+//si esta es correcta o incorrecta al presionas comprobar
+
 public class LevelManager : MonoBehaviour
 {
-    //Instancia de la clase
+    //Instancia de la clase de la leccion
     public static LevelManager Instance;
     [Header("Level Data")]
     public SubjectContainer subject;
 
+    //Un header que define la interfaz y sus colores ya acciones
     [Header("User Interface")]
     public TMP_Text QuestionTxt;
     public TMP_Text livesTxt;
@@ -36,10 +37,10 @@ public class LevelManager : MonoBehaviour
     [Header("Current Lesson")]
     public Leccion currentLesson;
 
-    //(.5 pts perdidos XD) Patron Singleton: Es un patrón de diseño, encargado, de crear una instancia de la clase para ser referenciada en otra clase sin la necesidad de declarar una variables.
-    /// <summary>
-    ///Verificará que solo haya una instancia de LevelManager
-    /// </summary>
+    //Patron Singleton: Es un patrón de diseño, encargado, de crear una instancia de la clase para ser referenciada en otra clase sin la necesidad de declarar una variables.
+    
+    //El singleton verificará que solo haya una instancia de LevelManager
+    
     private void Awake()
     {
         if(Instance != null)
@@ -52,50 +53,49 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Este metodo esta ligado a un boton con imagen de un tache, nos ayudará a regresar a la escena principal "Main"
-    /// </summary>
+    
+    /// Este metodo es el que permite al tache regresar al menu principal
+  
     public void GoToMenu()
     {
         SceneManager.LoadScene("Main");
     }
 
 
-    /// <summary>
-    ///  Esta cargará la primera pregunta de nuestra leccion y registra la respuesta,
-    ///  para despues habilitar el botón para enviar la respuesta
-    ///  Todo es a nivel UI/comienza desde que empezamos a jugar
-    /// </summary>
+  
+    //Esta cargará la primera pregunta de la leccion y registra la respuesta,
+    //para despues habilitar el botón de comprobar
+    
+    
     void Start()
     {
         subject = SaveSystem.Instance.subject;
-        //Establecemos la cantidad de preguntas en la leccion
+        //Establece la cantidad de preguntas en la leccion
         questionAmount = subject.leccionList.Count;
-        //Cargar la primera pergunta
+        //Cargar la 1er pregunta
         LoadQuestion();
-        //check player input
+       //Revisa que esta haciendo el jugador
         CheckPlayerState();
     }
 
-    /// <summary>
-    /// Está encargado de buscar las preguntas, aquí esta la logica sobre lo que aparecera para la leccion, la pregunta y sus respuestas correspondientes
-    /// llamará la informacion para verificar la respuesta correcta y las opciones guardadas
-    /// una vez que se acaben las preguntas guardadas o asignadas, en consola aparecera un mensaje indicandolo
-    /// </summary>
+    //Está encargado de buscar las preguntas, aquí esta la logica sobre lo que aparecera para la leccion, la pregunta y sus respuestas correspondientes
+    //llamará la informacion para verificar la respuesta correcta y las opciones guardadas
+    //na vez que se acaben las preguntas guardadas o asignadas, en consola aparecera un mensaje indicandolo
+ 
     private void LoadQuestion()
     {
         //Aseguramos que la pregunta actual esta dentro de los limites
         if(currentQuestion < questionAmount) 
         {
-            //Establecemos la leccíon actual
+            //Establece la leccíon actual
             currentLesson = subject.leccionList[currentQuestion];
-            //Establecemos la pregunta
+            //Genera la pregunta
             question = currentLesson.lessons;
-            //Establecemos la respuesta correcta
+            //Establece cual es la respuesta correcta
             correctAnswer = currentLesson.options[currentLesson.correctAnswer];
-            //Establecemos la pregunta en UI
+            //Manda la pregunta a la  UI
             QuestionTxt.text = question;
-            //Establecemos las Opciones
+            //Genera las demas Opciones
             Options[0].GetComponent<OptionBtm>().OptionName = currentLesson.options[0];
             for(int i = 0; i < currentLesson.options.Count; i++)
             {
@@ -106,24 +106,22 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            //Si llegamos al final de las preguntas
+            //Y al termianr la leccion manda el mensaje de final de las preguntas a la consola
             Debug.Log("Fin de las preguntas");
            
         }
     }
 
-    /// <summary>
-    /// Este metodo nos ayuda a verificar la respuesta, si estuv bien aparecerá una ventana emergente verde, 
-    /// si la respuesta fue incorrecta el color será rojo
-    /// y procederá a mostrarnos la siguiente pregunta
-    /// </summary>
+    
+    //Este metodo es el que permite que, al verificar la respuesta, si es correcta aparecerá una ventana emergente verde, 
+    //en caso contrario sera roja, y pasa a la siguiente pregunta
     public void NextCuestion()
     {
         if(CheckPlayerState())
         {
             if (currentQuestion < questionAmount)
             {
-                //Revisamos si la respuesta es correcta o no
+                //Revisa si la respuesta es correcta o no
                 bool isCorrect = currentLesson.options[answerFromPlayer] == correctAnswer;
 
                 AnswerContainer.SetActive(true);
@@ -140,62 +138,54 @@ public class LevelManager : MonoBehaviour
                     Debug.Log("Respuesta incorrecta. " + question + ": " + correctAnswer);
 
                 }
-                //Actualizamos el contador de vida
+                //Actualiza  el contador de vida
                 livesTxt.text = lives.ToString();
 
-                //Incrementamos el indice de la pregunta actual
+                //Incrementa el indice de la pregunta 
                 currentQuestion++;
 
-                //Mostrar el resultado durante un tiempo (puedes usar una corotine o Invoke)
+                //Mostrar el resultado durante un tiempo para que el usuario se corrija
                 StartCoroutine(ShowResultAndLoadQuestion(isCorrect));
 
-                //Reset answer from player
+                //reinicia el proceso
                 answerFromPlayer = 9;
             }
             else
             {
-                //Cambio de escena
+                //Cambia de escena
             }
         }
     }
 
-    /// <summary>
-    /// Aqui nos mostrara la respuesta correcta a la pregunta despues de haber sido respondida, esperará 2.5 segundos
-    /// se ocultará y llamará a la siguiente pregunta
-    /// </summary>
-    /// <param name="isCorrect"></param>
-    /// <returns></returns>
+    
+    //Este metodo se encarga de mostrara la respuesta correcta a la pregunta, despues de 1.5 segundos
+    //se ocultará y seguira con la siguiente pregunta
+  
     private IEnumerator ShowResultAndLoadQuestion(bool isCorrect)
     {
-        yield return new WaitForSeconds(2.5f); //Ajusta el tiempo que deseas mostrar el resultado
+        //Define el tiempo en el que se muestra el resultado
+        yield return new WaitForSeconds(1.5f); 
 
-        //Ocultar el contenedor de respuestas
+        //Oculta el contenedor de respuestas
         AnswerContainer.SetActive(false);
 
-        //Cargar la nueva pregunta
+        //Carga la siguiente pregunta
         LoadQuestion();
-
-        //Activar el botón después de mostrar el resultado
-        //Puedes hacer esto aquí o en LoadQuestion(), dependiendo de tu estructura
-        //por ejemplo, si el botón está en el mismo GameObject que el script:
-        //GetComponent<Buttton>().intercatable = true;
         CheckPlayerState();
     }
 
-    /// <summary>
-    /// Aquí nos guarda la respuesta del jugador, la que eligió
-    /// </summary>
-    /// <param name="_answer"></param>
+    
+    //Aquí se guarda la respuesta que eligio el usuario
+   
+    
     public void SetPlayerAnswer(int _answer)
     {
         answerFromPlayer = _answer;
     }
 
-    /// <summary>
-    /// Este detecta si ya fue seleccionada una respuesta, para despues habilitar el boton de comprobar
-    /// mientras no nos deja enviar nada
-    /// </summary>
-    /// <returns></returns>
+   
+    //Este metodo detecta si ya fue seleccionada una respuesta, para despues habilitar el boton de comprobar y evite cuakquier otra accion
+   
     public bool CheckPlayerState()
     {
         if(answerFromPlayer != 9)

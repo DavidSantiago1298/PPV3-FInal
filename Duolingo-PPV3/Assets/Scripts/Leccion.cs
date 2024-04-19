@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-/// <summary>
-/// Aqui guardaremos la informacion de la leccion, se almacenarán y despues se podrá hacer uso de ellos
-/// </summary>
+
+//En este scrypt se guarda la informacion de la leccion a la vez que la almacena para usarse en el juego
+
 [System.Serializable]
 public class Leccion
 {
-    //Aqui guardamos el numero de leccion
+    //Este metodo crea el numero de leccion
     public int ID;
-    //Aqui almacenamos nuestra pregunta
+    //AEste metodo crea la pregunta
     public string lessons;
-    //Aqui almacenamos nuestras respuestas
+    //Este metodo crea las respuestas
     public List<string> options;
-    //aqui se almacena la respuesta correcta
+    //Este metodo crea a las y las define respuesta correcta
     public int correctAnswer;
 }
