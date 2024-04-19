@@ -21,6 +21,13 @@ Para jugar el juego debes de descargar el ejecutable, para esto sigue los siguie
 
 5.-Abrelo y disfruta!!!.
 
+
+Aqui les dejo miis redes de contacto profesional para cualquier duda o trabajo:
+
+https://www.linkedin.com/me?trk=p_mwlite_my_network-secondary_nav
+
+
+
 ![1](https://github.com/DavidSantiago1298/PPV3-FInal/assets/156475324/0e42491c-3b55-43ec-b67b-c1e5a47ec6e6)
 ![2](https://github.com/DavidSantiago1298/PPV3-FInal/assets/156475324/9874a835-0ae3-4dbe-963e-d8234514602f)
 ![3](https://github.com/DavidSantiago1298/PPV3-FInal/assets/156475324/982d8043-dcbc-457b-be01-a6d425d25642)
