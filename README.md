@@ -5,6 +5,30 @@ Este es un proyecto funcional donde puedes reforzar  y checar tus conocimientos 
 
 En la carpeta del proyecto se encuentran todos los assets usados al igual que los codigos con comentarios para guiarte.
 
+Dentro encontraras multiples Scrypts con las siguientes funciones:
+
+SaveSystem: Contiene el codigo que guarda los JSONS para las preguntas
+
+MainScrypt: Controla todo lo que es el cambio de menus
+
+SubjectContainer:Almacena el contenido de cada una de las lecciones
+
+Levelmanager:Maneja toda la logica de las lecciones, definiendo cual es la respuesta correcta o incorrecta y lanzando un mensaje en cualquier caso al igual que el color rojo y verde
+
+leccion:Es donde estan almacenados las instancias para los demas scrypts de las lecciones
+
+lesson container:Configura toda la logica de las lecciones, desde abrir o cerrar sus ventanas hasta su funcionamiento correcto
+
+salir:Controla la logica que permite cerrar la app
+
+subjectcontainer:Define la logica de las lecciones
+
+Option: Genera todas las opciones de las respuestas
+
+
+
+
+
 El proyecto cuenta con multiples funcionalidades básicas, podras seleccionar la leccion de tu preferencia en el menu principal, al entrar en una deberas seleccionar la respuesta correcta para avanzar, al acabar selecciona el tache y saldras de nuevo al menu principal
 
 En el menu principal se encuentran  dos botones que te permiten abrir los creditos y salir de la app.
