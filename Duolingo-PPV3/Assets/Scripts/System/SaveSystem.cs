@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-/// <summary>
-/// SaveSystem: ahorita verifica con la instancia si no existe otro de su mismo tipo, CreateFile: es capaz de crear documentos especificando su nombre y extension,
-/// ReadFile: nos ayuda a reflejar en consola la informacion de algun archivo que hayamos creado, busca el archivo en RESOURCES
-/// JSON: nos va a ayudar a crear un grupo que podamos guardar, para su uso a futuro
-/// </summary>
+//SaveSystem: Verifica con una instancia si no existe otro de su mismo tipo 
+//CreateFile: es capaz de crear documentos con nombre y extension Ãºnicos 
+//ReadFile: Lee y busca el archivo en la carpeta JSONS para poder reflejarlo en la.consola
+//JSON: nos va a ayudar a crear un grupo que podamos guardar, para su uso a futuro
+
 public class SaveSystem : MonoBehaviour
 {
-    //Creamos una instancia (la instancia es para referirce a un objeto ya existente, para así no tener que crear un nuevo objeto para todo)
+    //Creamos una instancia stancia que conecte las lecciones
     public static SaveSystem Instance;
 
     public Leccion data;
     public SubjectContainer subject;
 
-    /// <summary>
-    /// Patrón Singleton:
-    /// Verificará que solo haya una instancia de SaveSystem
-    /// </summary>
+    
+    
+    //Singletom que verifica que solo haya una instancia de SaveSystem
+
     private void Awake()
     {
         if (Instance != null)
@@ -37,27 +37,24 @@ public class SaveSystem : MonoBehaviour
     {
         //SaveToJSON("LeccionDummy", data);
 
-        //CreateFile("Luis", ".data");
-        //Debug.Log(ReadFile("Luis", ".data"));
+        //CreateFile("Lolo", ".data");
+        //Debug.Log(ReadFile("Lulu", ".data"));
 
         //subject = LoadFromJSON<SubjectContainer>("SegundoCompendio");
     }
 
     public void CreateFile(string _name, string _extension)
     {
-        //1. Definir el path del archivo
+        //Crea un path para el archivo
         string path = Application.dataPath + "/" + _name + _extension;
-        //2. Revisamos, si, el archivo en el path NO existe
+        //Revisas si el archivo no se repite
         if(!File.Exists(path))
         {
-            //3. Creamos el contenido
-            string content = "Loging Date: " + System.DateTime.Now + "\n";
-
-            //Fernando: Posicion del objeto
+            //Genera el contenido
+            string content = "Loging Date: " + System.DateTime.Now + 
             string position = "x: " + transform.position.x + "y: " + transform.position.y;
 
-            //4. Almacenamos la informacion
-            //File.AppendAllText(path, content);
+            //Encuentra el path
             File.AppendAllText(path, position);
 
         }
@@ -69,9 +66,9 @@ public class SaveSystem : MonoBehaviour
 
     public string ReadFile(string _fileName, string _extension)
     {
-        //1) Acceder al path del archivo
+        //Esta linea permite identificar en la carpeta de JSONS a los archivos
         string path = Application.dataPath + "/Resources/" + _fileName + _extension;
-        //2) Si el archivo existe, dame su info
+        //Identifica los archivos, si existen, recopila su informaciÃ³n 
         string data = "";
         if(File.Exists(path))
         {
@@ -79,9 +76,7 @@ public class SaveSystem : MonoBehaviour
         }
         return data;
     }
-    // Start is called before the first frame update
-
-    // Update is called once per frame
+    
     void Update()
     {
         

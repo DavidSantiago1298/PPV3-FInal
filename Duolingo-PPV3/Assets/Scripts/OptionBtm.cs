@@ -15,7 +15,7 @@ public class OptionBtm : MonoBehaviour
     public string OptionName;
 
 }
-    /// Aqui se ubica el boton por su nombre en la UI
+    //Aqui se ubica el boton por su nombre en la UI
   
     void Start()
     {
@@ -23,7 +23,7 @@ public class OptionBtm : MonoBehaviour
     }
 
 
-    //Este metodo permite actualizar el nombre visible en UI de las preeguntas para pasar a la siguiente cada vez que se requiera
+    //Este metodo permite actualizar el nombre visible en UI de las preguntas para pasar a la siguiente cada vez que se requiera
   
   
     public void UpdateText()
@@ -32,10 +32,8 @@ public class OptionBtm : MonoBehaviour
     }
 
     
-    //Este metodo detecta si el jugador selecciona alguna opcion,al hacerlo el levelManager actualizar· la informaciÛn de la respuesta del jugador 
-    //y activa el boton de comprobar.
-   
-    /// Este metodo permite a el boton ser seleccionable
+    //Este metodo detecta si el jugador selecciona alguna opcion,al hacerlo el levelManager actualizar√° la informaci√≥n de la respuesta del jugador 
+    //y activa el boton de comprobar, a la vez tambi√©n permite a el boton ser seleccionable
     
     public void SelectionOption()
     {
