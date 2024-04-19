@@ -1,0 +1,35 @@
+{
+  "Lesson": 2,
+  "leccionList": [
+    {
+      "ID": 1,
+      "lessons": "¿Qué es un componente en Unity y cómo se utiliza?",
+      "options": ["Un objeto 3D en la escena", "Una clase de programación que define el comportamiento de un objeto", "Una textura para los modelos 3D", "Una animación predefinida", "Un efecto de partículas"],
+      "correctAnswer": 1
+    },
+    {
+      "ID": 2,
+      "lessons": "¿Cómo se crea un nuevo script en Unity y dónde se guarda?",
+      "options": ["Se crea desde el menú de Assets y se guarda en la carpeta de Scripts", "Se crea desde el menú de GameObject y se guarda en la carpeta de Models", "Se crea desde el menú de Component y se guarda en la carpeta de Prefabs", "Se crea desde el menú de Window y se guarda en la carpeta de Scenes", "Se crea desde el menú de Edit y se guarda en la carpeta de Materials"],
+      "correctAnswer": 0
+    },
+    {
+      "ID": 3,
+      "lessons": "¿Qué es la física en los videojuegos y por qué es importante?",
+      "options": ["El aspecto visual de un juego", "El diseño de niveles", "El comportamiento de los personajes", "El motor de renderizado", "El sistema que simula las interacciones físicas en el juego"],
+      "correctAnswer": 4
+    },
+    {
+      "ID": 4,
+      "lessons": "¿Qué es un GameObject en Unity y cuál es su función?",
+      "options": ["Un objeto especial para la interfaz de usuario", "Un objeto que contiene componentes y representa elementos en la escena", "Un objeto para almacenar scripts", "Un objeto para reproducir sonidos", "Un objeto para crear efectos visuales"],
+      "correctAnswer": 1
+    },
+    {
+      "ID": 5,
+      "lessons": "¿Cómo se añade un componente a un GameObject en Unity?",
+      "options": ["Arrastrándolo desde el panel de Project al GameObject", "Haciendo clic derecho en el GameObject y seleccionando Add Component", "Editando directamente el código del GameObject", "Usando el menú de Window para agregar componentes", "Creando un nuevo GameObject para cada componente"],
+      "correctAnswer": 1
+    }
+  ]
+}

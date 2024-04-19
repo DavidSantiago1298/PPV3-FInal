@@ -1,0 +1,35 @@
+{
+  "Lesson": 5,
+  "leccionList": [
+    {
+      "ID": 1,
+      "lessons": "¿Qué es un Raycast en Unity y para qué se utiliza?",
+      "options": ["Un tipo de sonido en 3D", "Un tipo de animación de rayos", "Un método para dibujar líneas en la escena", "Un método para detectar colisiones en una dirección específica", "Un componente para iluminación en tiempo real"],
+      "correctAnswer": 3
+    },
+    {
+      "ID": 2,
+      "lessons": "¿Qué función se utiliza para destruir un objeto en Unity?",
+      "options": ["DestroyObject()", "RemoveObject()", "EraseObject()", "DeleteObject()", "Destroy()"],
+      "correctAnswer": 4
+    },
+    {
+      "ID": 3,
+      "lessons": "¿Cómo se llama el sistema de partículas en Unity para crear efectos visuales?",
+      "options": ["ParticleFX", "VFXGraph", "ParticleSystem", "VisualEffects", "EffectEmitter"],
+      "correctAnswer": 2
+    },
+    {
+      "ID": 4,
+      "lessons": "¿Qué es un ScriptableObject en Unity y para qué se utiliza?",
+      "options": ["Un componente para animaciones complejas", "Un objeto para almacenar datos que persisten entre escenas", "Un componente para renderizar partículas", "Un objeto para controlar la cámara", "Un componente para crear terrenos"],
+      "correctAnswer": 1
+    },
+    {
+      "ID": 5,
+      "lessons": "¿Qué es la física en Unity y por qué es importante en los videojuegos?",
+      "options": ["Un motor de renderizado", "Un sistema de iluminación", "Un sistema de sonido", "Un motor de física para simulaciones realistas", "Un sistema de inteligencia artificial"],
+      "correctAnswer": 3
+    }
+  ]
+}

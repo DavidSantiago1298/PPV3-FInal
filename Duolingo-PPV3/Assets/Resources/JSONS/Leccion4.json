@@ -1,0 +1,35 @@
+{
+  "Lesson": 4,
+  "leccionList": [
+    {
+      "ID": 1,
+      "lessons": "¿Qué componente se utiliza para detectar colisiones en Unity?",
+      "options": ["Rigidbody", "Collider", "Transform", "Animator", "CollisionDetector"],
+      "correctAnswer": 1
+    },
+    {
+      "ID": 2,
+      "lessons": "¿Cuál es la función que se ejecuta antes de Start() en Unity?",
+      "options": ["Awake()", "OnEnable()", "OnStart()", "Initialize()", "PreStart()"],
+      "correctAnswer": 0
+    },
+    {
+      "ID": 3,
+      "lessons": "¿Qué tipo de archivo se utiliza para almacenar escenas en Unity?",
+      "options": [".unity", ".scene", ".level", ".map", ".stage"],
+      "correctAnswer": 0
+    },
+    {
+      "ID": 4,
+      "lessons": "¿Cómo se llama el editor visual de Unity para diseñar escenas y niveles?",
+      "options": ["Unity Editor", "Scene Designer", "Level Builder", "Game Maker", "Unity Hub"],
+      "correctAnswer": 1
+    },
+    {
+      "ID": 5,
+      "lessons": "¿Qué es un componente Rigidbody en Unity?",
+      "options": ["Un componente para renderizar objetos", "Un componente para detectar colisiones", "Un componente para aplicar físicas realistas", "Un componente para reproducir sonidos", "Un componente para animar objetos"],
+      "correctAnswer": 2
+    }
+  ]
+}

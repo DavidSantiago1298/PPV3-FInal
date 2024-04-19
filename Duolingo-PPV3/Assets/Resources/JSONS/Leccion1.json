@@ -1,0 +1,35 @@
+{
+  "Lesson": 1,
+  "leccionList": [
+    {
+      "ID": 1,
+      "lessons": "¿Qué lenguaje de programación se utiliza comúnmente en Unity?",
+      "options": ["Python", "C#", "JavaScript", "Ruby", "Java"],
+      "correctAnswer": 1
+    },
+    {
+      "ID": 2,
+      "lessons": "¿Cómo se llama la función que se ejecuta una vez al inicio del juego en Unity?",
+      "options": ["Update()", "Start()", "Awake()", "OnEnable()", "OnStart()"],
+      "correctAnswer": 1
+    },
+    {
+      "ID": 3,
+      "lessons": "¿Cuál es el componente que permite mover y rotar objetos en Unity?",
+      "options": ["Rigidbody", "Transform", "Collider", "Animator", "MoverComponent"],
+      "correctAnswer": 1
+    },
+    {
+      "ID": 4,
+      "lessons": "En Unity, ¿cómo se llama el proceso de convertir tu proyecto en un juego ejecutable?",
+      "options": ["Compiling", "Exporting", "Building", "Rendering", "Packaging"],
+      "correctAnswer": 2
+    },
+    {
+      "ID": 5,
+      "lessons": "¿Cuál es la extensión de archivo para los scripts de Unity?",
+      "options": [".java", ".py", ".cs", ".rb", ".unityscript"],
+      "correctAnswer": 2
+    }
+  ]
+}

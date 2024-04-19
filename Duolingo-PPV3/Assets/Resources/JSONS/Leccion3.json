@@ -1,0 +1,35 @@
+{
+  "Lesson": 3,
+  "leccionList": [
+    {
+      "ID": 1,
+      "lessons": "¿Cómo puedes mover un objeto en Unity?",
+      "options": ["Usando el método Move()", "Cambiando la propiedad de transformación", "Usando el método Translate()", "Cambiando la propiedad de velocidad", "Aplicando fuerzas físicas"],
+      "correctAnswer": 1
+    },
+    {
+      "ID": 2,
+      "lessons": "¿Qué es un prefab en Unity?",
+      "options": ["Un tipo de objeto que se puede duplicar", "Un tipo de script", "Un tipo de animación", "Un tipo de textura", "Un tipo de efecto de partículas"],
+      "correctAnswer": 0
+    },
+    {
+      "ID": 3,
+      "lessons": "¿Cómo puedes detectar colisiones en Unity?",
+      "options": ["Usando el método OnCollisionEnter", "Usando el método DetectCollision()", "Usando el método OnCollision()", "Usando el método CheckCollision()", "Usando el método OnTriggerEnter"],
+      "correctAnswer": 0
+    },
+    {
+      "ID": 4,
+      "lessons": "¿Cómo puedes crear un ciclo de juego en Unity?",
+      "options": ["Usando los métodos de MonoBehaviour", "Usando un bucle while", "Usando un bucle for", "Usando el método GameLoop()", "Usando el método Update()"],
+      "correctAnswer": 0
+    },
+    {
+      "ID": 5,
+      "lessons": "¿Cómo puedes importar assets en Unity?",
+      "options": ["Arrastrándolos al panel de Project", "Usando el menú de File", "Usando el menú de Edit", "Usando el menú de Window", "Usando el botón de Importar"],
+      "correctAnswer": 0
+    }
+  ]
+}

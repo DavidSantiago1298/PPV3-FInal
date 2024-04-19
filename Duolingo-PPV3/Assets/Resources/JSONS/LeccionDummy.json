@@ -1,0 +1,12 @@
+{
+    "ID": 0,
+    "lessons": "Este caso permite acceder a solo atributos heredados",
+    "options": [
+        "void",
+        "start",
+        "private",
+        "protected",
+        "public"
+    ],
+    "correctAnswer": 3
+}
